@@ -29,27 +29,43 @@ jobs:
     - run: npm run build --if-present
     - run: npm i
     # - run: npm start
-- pipeline: "production"
-  trigger_mode: "MANUAL"
-  ref_name: "master"
-  variables:
-  - key: "username"
-    value: "Buddy"
-    settable: false
-    description: "var_descrption"
-  actions:
-  - action: "Push to https://git.heroku.com/calm-eyrie-56872.git"
-    type: "PUSH"
-    login: "aditya.gupta@hiteshi.com"
-    password: "Aaditya#1234"
-    push_tags: false
-    git_auth_mode: "HTTP"
-    target_branch: "Master"
-    push_url: "https://git.heroku.com/calm-eyrie-56872.git"
-    comment: "Trial"
-    tag: "demoTag"
-    deployment_excludes:
-    - "/tmp/"
-    trigger_condition: "ALWAYS"
-    use_custom_gitignore: true
-    without_force: false
+    actions:
+    - action: "Push to https://git.heroku.com/calm-eyrie-56872.git"
+      type: "PUSH"
+      login: "aditya.gupta@hiteshi.com"
+      password: "Aaditya#1234"
+      push_tags: false
+      git_auth_mode: "HTTP"
+      target_branch: "Master"
+      push_url: "https://git.heroku.com/calm-eyrie-56872.git"
+      comment: "Trial"
+      tag: "demoTag"
+      deployment_excludes:
+      - "/tmp/"
+      trigger_condition: "ALWAYS"
+      use_custom_gitignore: true
+      without_force: false
+# - pipeline: "production"
+#   trigger_mode: "MANUAL"
+#   ref_name: "master"
+#   variables:
+#   - key: "username"
+#     value: "Buddy"
+#     settable: false
+#     description: "var_descrption"
+#   actions:
+#   - action: "Push to https://git.heroku.com/calm-eyrie-56872.git"
+#     type: "PUSH"
+#     login: "aditya.gupta@hiteshi.com"
+#     password: "Aaditya#1234"
+#     push_tags: false
+#     git_auth_mode: "HTTP"
+#     target_branch: "Master"
+#     push_url: "https://git.heroku.com/calm-eyrie-56872.git"
+#     comment: "Trial"
+#     tag: "demoTag"
+#     deployment_excludes:
+#     - "/tmp/"
+#     trigger_condition: "ALWAYS"
+#     use_custom_gitignore: true
+#     without_force: false
