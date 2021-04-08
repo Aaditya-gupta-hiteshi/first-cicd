@@ -29,6 +29,14 @@ jobs:
     - run: npm run build --if-present
     - run: npm i
     # - run: npm start
+- pipeline: "production"
+  trigger_mode: "MANUAL"
+  ref_name: "master"
+  variables:
+  - key: "username"
+    value: "Buddy"
+    settable: false
+    description: "var_descrption"
   actions:
   - action: "Push to https://git.heroku.com/calm-eyrie-56872.git"
     type: "PUSH"
