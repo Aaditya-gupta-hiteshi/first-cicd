@@ -1,7 +1,7 @@
 {
   "name": "first-cicd",
   "version": "1.0.1",
-  "description": "",
+  "description": "This is a node app to practice pipelines",
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1"
